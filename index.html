@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_task_3</title>
+</head>
+<body>
+    <script>
+        // function  that takes one parameter (whole number/integer) and checks if numbers 
+        // from 1 to a  given parameter that  are divisible  by 2,3,5 while replacing with an appropriate
+        //below
+        /* numbers  divisible by 2 are replaced by "yu"
+        *numbers divisible by 3 are replaced by "gi"
+        *numbers divisible by 5 are replaced by "oh"
+        *numbers  are unchanged if not divisible by any of  the  above*/
+
+        /* also, numbers divisible  by  5,3,2  would  have a  multiple of 30 and would be replaced
+        'yu-gi-oh'
+        * numbers  divisible by 3 and 5 would have a multiple of 15 and would be  replaced with 'gi-oh'
+        *numbers  divisible by 2  and 5 would have a  multiple of 10 and would be replaced with 'yu-oh'
+        *numbers divisible by 2 and 3 would have a multiple of 6 and would be  replaced with 'yu-gi'*/
+
+        function yugioh () {
+            let  numarray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    
+            for ( let i = 1; i <= 100; i++) {
+                if ((i%30) === 0){
+                    console.log('yu-gi-oh');
+                }
+                else if ((i%15) === 0) {
+                    console.log('gi-oh');
+            }
+            else if ((i%10) === 0){
+                console.log('yu-oh');
+            }
+            else if ((i%6) === 0){
+                console.log('yu-gi');
+            }
+            else if ((i%5) === 0){
+                console.log('oh');
+            }
+            else if ((i%3) === 0){
+                console.log('gi');
+            }
+            else if ((i%2) === 0){
+                console.log('yu');
+            }
+            else{
+                console.log(i);
+            }
+           
+            }
+            return  numarray;
+        }
+        yugioh(100);
+        yugioh(50);
+            
+
+    </script>
+    
+</body>
+</html>
